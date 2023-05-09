@@ -16,3 +16,27 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Таймер */
+.timer {
+  display: flex;
+  margin-top: 20px;
+  column-gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.label {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
