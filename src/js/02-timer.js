@@ -47,7 +47,7 @@ function onStartClick() {
       return;
     }
 
-    remainTime = convertMs(dateDifferenceMs);
+    const remainTime = convertMs(dateDifferenceMs);
     displayTime(remainTime);
   }, 1000);
   refs.startBtn.setAttribute('disabled', true);
