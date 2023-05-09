@@ -503,7 +503,7 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"cYUEh":[function(require,module,exports) {
-refs = {
+const refs = {
     startBtn: document.querySelector("[data-start]"),
     stopBtn: document.querySelector("[data-stop]"),
     body: document.querySelector("body")

@@ -6,7 +6,7 @@ formRef.addEventListener('submit', onSubmitForm);
 
 // Повертає promise з обєктом { position, delay }
 function createPromise(position, delay) {
-  const promise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
 
     if (shouldResolve) {
@@ -17,7 +17,6 @@ function createPromise(position, delay) {
       reject({ position, delay });
     }
   });
-  return promise;
 }
 
 // Викликає функцію createPromise(position, delay) стільки разів, скільки ввели в поле amount.

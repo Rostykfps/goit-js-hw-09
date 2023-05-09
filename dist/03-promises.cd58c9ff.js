@@ -510,7 +510,7 @@ const formRef = document.querySelector(".form");
 formRef.addEventListener("submit", onSubmitForm);
 // Повертає promise з обєктом { position, delay }
 function createPromise(position, delay) {
-    const promise = new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject)=>{
         const shouldResolve = Math.random() > 0.3;
         if (shouldResolve) // Fulfill
         resolve({
@@ -523,7 +523,6 @@ function createPromise(position, delay) {
             delay
         });
     });
-    return promise;
 }
 // Викликає функцію createPromise(position, delay) стільки разів, скільки ввели в поле amount.
 // Під час кожного виклику передає їй номер промісу(position), що створюється,

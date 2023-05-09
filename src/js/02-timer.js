@@ -3,6 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
 const refs = {
+  inputField: document.querySelector('#datetime-picker'),
   startBtn: document.querySelector('[data-start]'),
   days: document.querySelector('[data-days]'),
   hours: document.querySelector('[data-hours]'),
@@ -51,6 +52,7 @@ function onStartClick() {
     displayTime(remainTime);
   }, 1000);
   refs.startBtn.setAttribute('disabled', true);
+  refs.inputField.setAttribute('disabled', true);
 }
 
 // Відображення залишкового часу на сторінці

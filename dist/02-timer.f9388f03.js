@@ -509,7 +509,8 @@ var _flatpickrDefault = parcelHelpers.interopDefault(_flatpickr);
 var _flatpickrMinCss = require("flatpickr/dist/flatpickr.min.css");
 var _notiflix = require("notiflix");
 var _notiflixDefault = parcelHelpers.interopDefault(_notiflix);
-refs = {
+const refs = {
+    inputField: document.querySelector("#datetime-picker"),
     startBtn: document.querySelector("[data-start]"),
     days: document.querySelector("[data-days]"),
     hours: document.querySelector("[data-hours]"),
@@ -544,10 +545,11 @@ function onStartClick() {
         const currentDate1 = Date.now();
         const dateDifferenceMs = setDate - currentDate1;
         if (dateDifferenceMs < 0) return;
-        remainTime = convertMs(dateDifferenceMs);
+        const remainTime = convertMs(dateDifferenceMs);
         displayTime(remainTime);
     }, 1000);
     refs.startBtn.setAttribute("disabled", true);
+    refs.inputField.setAttribute("disabled", true);
 }
 // Відображення залишкового часу на сторінці
 function displayTime({ days , hours , minutes , seconds  }) {
